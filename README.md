@@ -107,16 +107,65 @@ Open the psql prompt to view the roles, and databases:
 
 ## Steps for deploying to Heroku
 Here are the steps followed to deploy the code as Heroku app:
- 1. Install Heroku CLI in your local
-    ##
+ 1. Installed Heroku CLI in your local
+    
     *. curl https://cli-assets.heroku.com/install.sh | sh*
 
     # Or, use Homebrew on Mac
-*. brew tap heroku/brew && brew install heroku*
-    # Verify the installation
-*. heroku --version*
-    # Verify the download
-which heroku
-3. Check the Heroku version
+    
+    *. brew tap heroku/brew && brew install heroku*
+    
+ 2. Verified the installation
+     
+    *. heroku --version*
+ 3. Verified the download
+     
+    *. which heroku*
+ 4. Logged at Heroku with your user name and password from dashboard from https://www.heroku.com/home
+
+    *. heroku login -i*
+ 5. Initialized Git
+
+     *. git init*
+     
+     *. git config --global user.email "you@example.com"*
+
+     *. git config --global user.name "Your Name"*
+
+     *. git add .*
+
+     *. git status*
+
+     *. git commit -m "your message"*
+ 7.  Created an App in Heroku Cloud
+
+     *. heroku create [my-app-name] --buildpack heroku/python*
+
+     *. git remote -v*
+ 8.  Added PostgreSQL addon for our database
+
+      *. heroku addons:create heroku-postgresql:essential-0 --app [my-app-name]*
+ 9.  Configured the App
+
+      *. heroku config --app [my-app-name]*
+ 10. Added additional Environment Variables from setup.sh. Go to your Heroku Dashboard in the browser and access your application's settings. You will have to go to the Heroku dashboard >> Particular App >> Settings >> Reveal Config Vars section. Add the variables.
+
+ 11. Pushed it to Git
+
+      *. git push heroku HEAD:master*
+ 12. Ran migrations
+
+     *. python manage.py db init*
+
+     *. python manage.py db migrate*
+
+     *. python manage.py db upgrade*
+
+     *. heroku run python manage.py db upgrade --app [my-app-name]*
+ 13. Accessed the application at
+
+  https://myfsnd-app-ccf72007e807.herokuapp.com/
+  
+     
 
 
