@@ -29,7 +29,16 @@ At least two tests of RBAC for each role
 # Steps to Deployment:
 ## Local Run:
 ### Prerequisite:
-Git: Clone the Git repository git@github.com:sarbanibhadra/FSND_CapstoneV1.2.git
+#### Git: 
+Clone the Git repository git@github.com:sarbanibhadra/FSND_CapstoneV1.2.git
+#### Install Postgres:
+# Mac/Linux
+# Install Postgres using Brew. Reference: https://wiki.postgresql.org/wiki/Homebrew 
+brew install postgresql
+# Verify the installation
+postgres --version
+pg_ctl -D /usr/local/var/postgres start
+pg_ctl -D /usr/local/var/postgres stop
 # Screenshots:
 1 Login screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/88f43bd1-6cd1-4e58-bb3e-557ebd1e58b0)
