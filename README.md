@@ -50,6 +50,12 @@ psql [username]
 \du
 ##### View databases
 \list
+
+### Instructions to run the App in Local:
+###### Create a project directory
+###### Clone the starter repo
+###### Copy the sample app to the new directory
+
 # Screenshots:
 1 Login screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/88f43bd1-6cd1-4e58-bb3e-557ebd1e58b0)
