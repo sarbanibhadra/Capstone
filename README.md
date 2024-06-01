@@ -165,6 +165,8 @@ Here are the steps followed to deploy the code as Heroku app:
  13. Accessed the application at
 
   https://myfsnd-app-ccf72007e807.herokuapp.com/
+
+  # Screenshots:
   
      
 
