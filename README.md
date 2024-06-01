@@ -60,6 +60,16 @@ psql [username]
    python3 -m venv myvenv
 
    source myvenv/bin/activate
+5. Set up the environment variables
+   chmod +x setup.sh
+   source setup.sh
+
+6. Install the Python dependencies
+
+   pip install -r requirement.txt
+   
+7. Run the app
+   python3 app.py
 
 # Screenshots:
 1 Login screen
