@@ -167,10 +167,11 @@ Here are the steps followed to deploy the code as Heroku app:
   https://myfsnd-app-ccf72007e807.herokuapp.com/
 
   # Screenshots:
+  1 Login screen
   ![image](https://github.com/sarbanibhadra/FSND_CapstoneV1.2/assets/28161929/0e2476f6-ae53-4b8b-a6bf-c8576a4d3288)
-
+  2.Login and password entry screen from auth0
   ![image](https://github.com/sarbanibhadra/FSND_CapstoneV1.2/assets/28161929/6abdd828-9543-4d31-be35-9683cba2ed04)
-
+  3.Home page
   ![image](https://github.com/sarbanibhadra/FSND_CapstoneV1.2/assets/28161929/dddc9ccf-b7b5-4c0f-b7b0-4384e32c4236)
 
 
