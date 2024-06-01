@@ -37,6 +37,7 @@ Clone the Git repository: [git@github.com:sarbanibhadra/FSND_CapstoneV1.2.git](h
 brew install postgresql
 ##### Verify the installation
 postgres --version
+
 pg_ctl -D /usr/local/var/postgres start
 
 pg_ctl -D /usr/local/var/postgres stop
