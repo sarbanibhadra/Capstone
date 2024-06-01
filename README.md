@@ -77,7 +77,7 @@ Open the psql prompt to view the roles, and databases:
 
 13. Application URL in local setup
     
-    *. http://127.0.0.1:5000/*
+    http://127.0.0.1:5000/
 
 # Screenshots:
 1 Login screen
