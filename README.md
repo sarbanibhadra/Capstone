@@ -52,3 +52,7 @@ At least two tests of RBAC for each role
 12 Logout screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/0cb49f6a-d3b9-4deb-81ec-ac36b9d074b0)
 
+# Steps to Deployment
+## Local Run
+
+
