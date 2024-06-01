@@ -41,6 +41,15 @@ postgres --version
 pg_ctl -D /usr/local/var/postgres start
 
 pg_ctl -D /usr/local/var/postgres stop
+
+##### Verify the database
+Open the psql prompt to view the roles, and databases:
+###### Open psql prompt
+psql [username]
+###### View the available roles
+\du
+###### View databases
+\list
 # Screenshots:
 1 Login screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/88f43bd1-6cd1-4e58-bb3e-557ebd1e58b0)
