@@ -26,7 +26,9 @@ Add or delete a movie from the database
 One test for success behavior of each endpoint
 One test for error behavior of each endpoint
 At least two tests of RBAC for each role
-# Screenshots 
+# Steps to Deployment:
+## Local Run:
+# Screenshots:
 1 Login screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/88f43bd1-6cd1-4e58-bb3e-557ebd1e58b0)
 2.Login and password entry screen from auth0
@@ -52,7 +54,5 @@ At least two tests of RBAC for each role
 12 Logout screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/0cb49f6a-d3b9-4deb-81ec-ac36b9d074b0)
 
-# Steps to Deployment
-## Local Run
 
 
