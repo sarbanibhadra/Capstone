@@ -108,7 +108,8 @@ Open the psql prompt to view the roles, and databases:
 ## Steps for deploying to Heroku
 Here are the steps followed to deploy the code as Heroku app:
  1. Install Heroku CLI in your local
-    # I *. curl https://cli-assets.heroku.com/install.sh | sh*
+    # I
+    *. curl https://cli-assets.heroku.com/install.sh | sh*
 
     # Or, use Homebrew on Mac
 *. brew tap heroku/brew && brew install heroku*
