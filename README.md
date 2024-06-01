@@ -72,6 +72,7 @@ psql [username]
     pip install -r requirement.txt
    
 12. Run the app
+    
     python3 app.py
 
 # Screenshots:
