@@ -55,6 +55,10 @@ psql [username]
 1. Create a project directory
 2. Clone the starter repo
 3. Copy the sample app to the new directory
+4. Create a virtual environment
+   python3 -m venv myvenv
+
+   source myvenv/bin/activate
 
 # Screenshots:
 1 Login screen
