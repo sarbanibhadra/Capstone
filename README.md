@@ -35,20 +35,20 @@ Clone the Git repository: [git@github.com:sarbanibhadra/FSND_CapstoneV1.2.git](h
 ##### Mac/Linux
 ##### Install Postgres using Brew. Reference: https://wiki.postgresql.org/wiki/Homebrew 
 brew install postgresql
-##### Verify the installation
+#### Verify the installation:
 postgres --version
 
 pg_ctl -D /usr/local/var/postgres start
 
 pg_ctl -D /usr/local/var/postgres stop
 
-##### Verify the database
+#### Verify the database:
 Open the psql prompt to view the roles, and databases:
-###### Open psql prompt
+##### Open psql prompt
 psql [username]
-###### View the available roles
+##### View the available roles
 \du
-###### View databases
+##### View databases
 \list
 # Screenshots:
 1 Login screen
