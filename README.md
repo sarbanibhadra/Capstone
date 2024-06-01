@@ -79,6 +79,8 @@ Open the psql prompt to view the roles, and databases:
     
     http://127.0.0.1:5000/
 
+## Deploying to Heroku
+
 # Screenshots:
 1 Login screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/88f43bd1-6cd1-4e58-bb3e-557ebd1e58b0)
