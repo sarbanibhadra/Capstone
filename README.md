@@ -34,7 +34,7 @@ Clone the Git repository: [git@github.com:sarbanibhadra/FSND_CapstoneV1.2.git](h
 #### Install Postgres:
 ##### Mac/Linux
 ##### Install Postgres using Brew. Reference: https://wiki.postgresql.org/wiki/Homebrew 
-* brew install postgresql
+“*…. brew install postgresql*"
 #### Verify the installation:
 * postgres --version
 
