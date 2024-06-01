@@ -26,6 +26,16 @@ Add or delete a movie from the database
 One test for success behavior of each endpoint
 One test for error behavior of each endpoint
 At least two tests of RBAC for each role
+
+# Instructions to set up authentication
+1. Login to auth0 account
+   https://auth0.com
+3. Create tenant
+4. Create application
+5. Create API
+6. Create User
+7. Create Role
+   
 # Steps to Deployment:
 ## Local Run:
 ### Prerequisite:
