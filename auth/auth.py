@@ -1,6 +1,6 @@
 import os
 import json
-from flask import request, _request_ctx_stack, abort, session,  url_for
+from flask import request, _request_ctx_stack, abort, session, url_for
 from functools import wraps
 from jose import jwt
 from urllib.request import Request, urlopen
@@ -12,26 +12,22 @@ API_AUDIENCE = 'capstone'
 PAYLOAD_PERMISSIONS = 'permissions'
 
 def auth_register(oauth):
+    """
+    Register Auth0 with OAuth.
+
+    :param oauth: The OAuth instance.
+    """
     print("Inside auth_register")
     oauth.register(
         "auth0",
         client_id=os.getenv("AUTH0_CLIENT_ID"),
         client_secret=os.getenv("AUTH0_CLIENT_SECRET"), 
         authorize_url=f'https://{os.getenv("AUTH0_DOMAIN")}/authorize?audience=capstone',
-        # response_type='response_type=token',
         client_kwargs={
             "scope": "openid profile email",
         },
         server_metadata_url=f'https://{env.get("AUTH0_DOMAIN")}/.well-known/openid-configuration'
     )
-
-
-    # @app.route("/login")
-    # def login():
-    #     return oauth.auth0.authorize_redirect(
-    #         redirect_uri=url_for("callback", _external=True)
-    #     )
-
 
 ## AuthError Exception
 '''
@@ -40,6 +36,12 @@ A standardized way to communicate auth failure modes
 '''
 class AuthError(Exception):
     def __init__(self, error, status_code):
+        """
+        Initialize the AuthError exception.
+
+        :param error: The error message.
+        :param status_code: The HTTP status code.
+        """
         print("inside auth error")
         self.error = error
         self.status_code = status_code
@@ -58,33 +60,23 @@ class AuthError(Exception):
     return the token part of the header
 '''
 def get_token_auth_header(session):
+    """
+    Obtain the Access Token from the Authorization Header.
+
+    :param session: The current user session.
+    :return: The access token.
+    :raises AuthError: If the authorization header is missing or malformed.
+    """
     print("inside get token auth header")
-    token=session.get('user')['access_token']
+    token = session.get('user')['access_token']
    
     print(token)
     print("token printed")
-    # header = request.headers.get("Authorization", None)
-    # print(header)
+
     if not token:
         raise AuthError({"code": "authorization_header_missing",
                         "description":
                             "Authorization header is missing"}, 401)
-
-    # splits = header.split()
-
-    # if len(splits) != 2:
-    #     raise AuthError({"code": "invalid_header",
-    #                     "description":
-    #                         "Authorization header must be"
-    #                         " Bearer token"}, 401)
-    # elif splits[0].lower() != "bearer":
-    #     raise AuthError({"code": "invalid_header",
-    #                     "description":
-    #                         "Authorization header must start with"
-    #                         " Bearer"}, 401)
-    
-
-    # token = splits[1]
 
     return token   
 
@@ -99,7 +91,15 @@ def get_token_auth_header(session):
     return true otherwise
 '''
 def check_permissions(permission, payload):
-    print("inside check_permissions"+ permission)
+    """
+    Check if the required permission is present in the JWT payload.
+
+    :param permission: The required permission.
+    :param payload: The decoded JWT payload.
+    :return: True if the permission is present.
+    :raises AuthError: If the permission is not included in the payload.
+    """
+    print("inside check_permissions" + permission)
     print(payload)
     if 'permissions' not in payload:
         raise AuthError({
@@ -127,7 +127,14 @@ def check_permissions(permission, payload):
     !!NOTE urlopen has a common certificate error described here: https://stackoverflow.com/questions/50236117/scraping-ssl-certificate-verify-failed-error-for-http-en-wikipedia-org
 '''
 def verify_decode_jwt(token):
-    print("token:::"+ token)
+    """
+    Verify and decode the JWT token.
+
+    :param token: The JWT token to be verified.
+    :return: The decoded payload.
+    :raises AuthError: If the token is invalid or expired.
+    """
+    print("token:::" + token)
     rsa_key = {}
 
     jsonurl = urlopen(f'https://audacity-fsnd-sarbani.uk.auth0.com/.well-known/jwks.json')
@@ -199,12 +206,19 @@ def verify_decode_jwt(token):
     return the decorator which passes the decoded payload to the decorated method
 '''
 def requires_auth(session, permission=''):
+    """
+    Decorator to enforce authorization based on permissions.
+
+    :param session: The current user session.
+    :param permission: The required permission.
+    :return: The decorator function.
+    """
     print("inside requires auth1")
     def requires_auth_decorator(f):
         print("inside requires_auth_decorator")
         @wraps(f)
         def wrapper(*args, **kwargs):
-            print("insude requires auth2")
+            print("inside requires auth2")
             token = get_token_auth_header(session)
             try:
                 payload = verify_decode_jwt(token)
