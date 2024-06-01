@@ -38,6 +38,7 @@ brew install postgresql
 ##### Verify the installation
 postgres --version
 pg_ctl -D /usr/local/var/postgres start
+
 pg_ctl -D /usr/local/var/postgres stop
 # Screenshots:
 1 Login screen
