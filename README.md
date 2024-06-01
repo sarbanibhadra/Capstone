@@ -106,5 +106,16 @@ Open the psql prompt to view the roles, and databases:
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/0cb49f6a-d3b9-4deb-81ec-ac36b9d074b0)
 
 ## Steps for deploying to Heroku
+Here are the steps followed to deploy the code as Heroku app:
+### 1. Install Heroku CLI in your local
+    # Install, if Heroku as Standalone
+*. curl https://cli-assets.heroku.com/install.sh | sh*
+    # Or, use Homebrew on Mac
+*. brew tap heroku/brew && brew install heroku*
+    # Verify the installation
+*. heroku --version*
+    # Verify the download
+which heroku
+3. Check the Heroku version
 
 
