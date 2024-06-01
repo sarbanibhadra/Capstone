@@ -53,22 +53,21 @@ psql [username]
 
 ### Instructions to run the App in Local:
 1. Create a project directory
-2. Clone the starter repo
-3. Copy the sample app to the new directory
-4. Create a virtual environment
-   
+3. Clone the starter repo inside the project directory
+   [git@github.com:sarbanibhadra/FSND_CapstoneV1.2.git](https://github.com/sarbanibhadra/FSND_CapstoneV1.2.git)
+6. Create a virtual environment
    python3 -m venv myvenv
 
    source myvenv/bin/activate
-5. Set up the environment variables
+7. Set up the environment variables
    chmod +x setup.sh
    source setup.sh
 
-6. Install the Python dependencies
+8. Install the Python dependencies
 
    pip install -r requirement.txt
    
-7. Run the app
+9. Run the app
    python3 app.py
 
 # Screenshots:
