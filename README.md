@@ -52,9 +52,9 @@ psql [username]
 \list
 
 ### Instructions to run the App in Local:
-###### Create a project directory
-###### Clone the starter repo
-###### Copy the sample app to the new directory
+####### 1. Create a project directory
+####### 2. Clone the starter repo
+####### 3. Copy the sample app to the new directory
 
 # Screenshots:
 1 Login screen
